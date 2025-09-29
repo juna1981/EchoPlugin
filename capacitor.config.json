@@ -1,0 +1,6 @@
+{
+  "ios": {
+    "src": "ios",
+    "classname": "EchoPluginPlugin"
+  }
+}

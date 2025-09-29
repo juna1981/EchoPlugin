@@ -1,0 +1,12 @@
+node_modules/
+dist/
+ios/Pods/
+ios/*.xcworkspace
+ios/*.xcodeproj
+android/build/
+android/.gradle/
+*.log
+.DS_Store
+test-plugin.js
+verify.sh
+validate-swift.sh

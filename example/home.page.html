@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Echo Plugin Demo
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="container">
+    <h1>Echo Plugin Test</h1>
+    <p>This example demonstrates the EchoPlugin integration with iOS native code.</p>
+    
+    <ion-item>
+      <ion-label position="stacked">Enter message to echo:</ion-label>
+      <ion-input [(ngModel)]="message" placeholder="Type your message here"></ion-input>
+    </ion-item>
+    
+    <ion-button expand="block" (click)="doEcho()" [disabled]="!message">
+      Echo Message
+    </ion-button>
+    
+    <ion-card *ngIf="echoResult">
+      <ion-card-header>
+        <ion-card-title>Echo Result</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        {{ echoResult }}
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
+
+<style>
+.container {
+  padding: 20px;
+}
+
+ion-button {
+  margin-top: 20px;
+}
+
+ion-card {
+  margin-top: 20px;
+}
+</style>
