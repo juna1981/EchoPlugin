@@ -1,0 +1,37 @@
+<!-- Plantilla de ejemplo que muestra botones para interactuar con el proceso principal de Electron -->
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Integración con Electron</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card *ngIf="estaEnElectron; else mensajeNavegador">
+    <ion-card-header>
+      <ion-card-title>Conectado a Electron</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-button expand="block" (click)="solicitarVersion()">Solicitar versión</ion-button>
+      <ion-button expand="block" color="secondary" (click)="solicitarRutaDescargas()">
+        Solicitar ruta de descargas
+      </ion-button>
+      <ion-textarea
+        readonly
+        auto-grow="true"
+        label="Respuesta del proceso principal"
+        [value]="respuestaProcesoPrincipal"
+      ></ion-textarea>
+    </ion-card-content>
+  </ion-card>
+
+  <ng-template #mensajeNavegador>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Modo navegador</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Esta funcionalidad solo está disponible en la versión de escritorio construida con Electron.
+      </ion-card-content>
+    </ion-card>
+  </ng-template>
+</ion-content>

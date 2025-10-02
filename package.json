@@ -1,0 +1,36 @@
+{
+  "name": "echo-plugin",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Aplicación Ionic Angular con envoltorio de Electron usando Capacitor",
+  "scripts": {
+    "start": "ionic serve",
+    "build": "ng build",
+    "postinstall": "cd electron && npm install",
+    "electron:build": "npm run build && cd electron && npm run build",
+    "electron:start": "npm run build && cd electron && npm run start"
+  },
+  "dependencies": {
+    "@angular/animations": "^16.2.0",
+    "@angular/common": "^16.2.0",
+    "@angular/compiler": "^16.2.0",
+    "@angular/core": "^16.2.0",
+    "@angular/forms": "^16.2.0",
+    "@angular/platform-browser": "^16.2.0",
+    "@angular/platform-browser-dynamic": "^16.2.0",
+    "@capacitor/angular": "^5.0.0",
+    "@capacitor/core": "^5.0.0",
+    "@ionic/angular": "^7.0.0",
+    "rxjs": "^7.8.0",
+    "tslib": "^2.6.0",
+    "zone.js": "~0.13.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^16.2.0",
+    "@angular/cli": "^16.2.0",
+    "@angular/compiler-cli": "^16.2.0",
+    "@capacitor/cli": "^5.0.0",
+    "@ionic/angular-toolkit": "^9.0.0",
+    "typescript": "~5.1.0"
+  }
+}
